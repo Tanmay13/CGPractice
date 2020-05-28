@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Paramterisations">
+ <parameter name="suite-level-param" value="Suite Level Parameter" />
+  <test name="Parameter Test One">
+      <classes>
+        <class name=" com.TestNG.Dec_Paramertrization_XML.ParameterTest">
+            <methods>
+                <include name="prameterTestOne" />
+            </methods>
+        </class>
+    </classes>
+  </test>
+  <test name="Parameter Test two">
+    <parameter name="test-level-param" value="Test Level Parameter" />
+        <classes>
+            <class name=" com.TestNG.Dec_Paramertrization_XML.ParameterTest">
+                <methods>
+                    <include name="prameterTestTwo" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Parameter Test three">
+        <parameter name="suite-level-param" value="Overiding Suite Level Parameter" />
+        <parameter name="test-three-param" value="Test Level Three Parameter" />
+            <classes>
+                <class name="ParameterTest">
+                    <methods>
+                        <include name="prameterTestThree" />
+                    </methods>
+                </class>
+            </classes>
+    </test>
+</suite> <!-- Paramterisations -->
